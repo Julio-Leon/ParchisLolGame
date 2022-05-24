@@ -20,8 +20,8 @@ function Table({ table }) {
     let tempRightColumn = []
     let tempLeftColumn = []
 
-    table.forEach(box => {
-      if (box.index >= 1 || box.index <= 17) {
+    table && table.forEach(box => {
+      if (box.index >= 1 && box.index <= 17) {
         tempRightColumn.push(box)
       } else if (box.index > 17 && box.index <= 34) {
         tempTopRow.push(box)
@@ -40,13 +40,15 @@ function Table({ table }) {
 
   useEffect(() => {
     createTable()
-  }, [])
+  }, [table])
 
   return (
-    <div className="table">
-      <RightColumn rightColumn={rightColumn} />
+    <div className="table flex-container">
       <TopRow topRow={topRow} />
-      <LeftColumn leftColumn={leftColumn} />
+      <div className="middle-area flex-container">
+        <LeftColumn leftColumn={leftColumn} />
+        <RightColumn rightColumn={rightColumn} />
+      </div>
       <BottomRow bottomRow={bottomRow} />
     </div>
   );

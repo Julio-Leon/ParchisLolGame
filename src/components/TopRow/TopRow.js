@@ -1,9 +1,13 @@
 import './TopRow.css';
 
-function TopRow({  }) {
+function TopRow({ topRow }) {
   return (
-    <div className="top-row">
-      top row
+    <div className="top-row flex-container">
+      {
+        topRow.map(block => {
+          return <h3 className='block' key={block.index}>{block.index}</h3>
+        })
+      }
     </div>
   );
 }

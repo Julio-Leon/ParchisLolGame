@@ -1,9 +1,13 @@
 import './BottomRow.css';
 
-function BottomRow({  }) {
+function BottomRow({ bottomRow }) {
   return (
-    <div className="bottom-row">
-      bottom row
+    <div className="bottom-row flex-container">
+      {
+        bottomRow.map(block => {
+          return <h3 className='block' key={block.index}>{block.index}</h3>
+        })
+      }
     </div>
   );
 }

@@ -1,4 +1,16 @@
 * {
   color: white;
   background-color: black;
+  padding: 0;
+  margin: 0;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.App {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

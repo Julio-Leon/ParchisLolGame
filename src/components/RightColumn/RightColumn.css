@@ -1,0 +1,4 @@
+.right-column {
+    flex-direction: column-reverse;
+    justify-content: center;
+}

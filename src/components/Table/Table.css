@@ -1,0 +1,15 @@
+.table {
+    height: 340px;
+    width: 680px;
+    flex-direction: column;
+}
+
+.middle-area {
+    justify-content: space-between;
+}
+
+.block {
+    width:34px;
+    height: 34px;
+    border: 1px white solid;
+}

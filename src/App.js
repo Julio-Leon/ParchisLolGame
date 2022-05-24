@@ -57,7 +57,7 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
+    <div className="App flex-container">
       <h1>Hello World</h1>
       <Table table={table}/>
     </div>

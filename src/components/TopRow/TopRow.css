@@ -1,0 +1,4 @@
+.top-row {
+    justify-content: center;
+    flex-direction: row-reverse;
+}
