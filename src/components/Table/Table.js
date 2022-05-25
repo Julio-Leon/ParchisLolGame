@@ -1,10 +1,12 @@
 import './Table.css';
 
+import { useEffect, useState } from 'react';
+
 import RightColumn from '../RightColumn/RightColumn';
 import LeftColumn from '../LeftColumn/LeftColumn';
 import TopRow from '../TopRow/TopRow';
 import BottomRow from '../BottomRow/BottomRow';
-import { useEffect, useState } from 'react';
+import ColorEntrances from '../ColorEntrances/ColorEntrances'
 
 function Table({ table }) {
 
@@ -47,6 +49,9 @@ function Table({ table }) {
       <TopRow topRow={topRow} />
       <div className="middle-area flex-container">
         <LeftColumn leftColumn={leftColumn} />
+
+        <ColorEntrances />
+
         <RightColumn rightColumn={rightColumn} />
       </div>
       <BottomRow bottomRow={bottomRow} />
